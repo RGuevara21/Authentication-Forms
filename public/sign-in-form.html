@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign-In</title>
+    <link rel="stylesheet" href="./sign-in.css" />
+  </head>
+  <body class="bg-gray-200">
+    <!-- Page Wrapper-->
+    <div
+      id="page-wrapper"
+      class="w-full flex items-center justify-center min-h-screen"
+    >
+      <!-- Container-Outside-->
+      <div id="outside-form-container" class="flex justify-center items-center">
+        <!-- Container-Inside -->
+        <div
+          id="inside-form-container"
+          class="bg-white px-20 py-20 flex flex-row rounded-xl shadow-xl drop-shadow-xl"
+        >
+          <!-- Form-Background -->
+          <div id="sign-in-form-background">
+            <img
+              src="./img_used/sign-in-background.jpg"
+              class="w-full object-contain object-center sm:w-20 md:w-60 lg:w-48 xl:w-56 2xl:w-10/12"
+            />
+            <span
+              class="mt-5 flex font-Roboto font-light justify-center items-center"
+            >
+              Don't have an account?
+              <a href="./sign-up-form.html" class="text-teal-500 ml-2">
+                Sign-Up</a
+              >
+            </span>
+          </div>
+          <!-- Form-Contents -->
+          <div id="sign-in-form-contents" class="block items-center">
+            <!-- Header Section-->
+            <div
+              id="header-section"
+              class="flex flex-col items-center justify-center"
+            >
+              <h1
+                id="header-title"
+                class="font-Montserrat text-4xl font-bold text-center block"
+              >
+                Authenticate
+              </h1>
+              <p
+                id="header-caption"
+                class="font-Roboto text-lg font-normal text-center block mt-8"
+              >
+                Sign in to access your GoCloud account.
+              </p>
+            </div>
+            <!-- Form Inputs Section -->
+            <form>
+              <fieldset>
+                <div id="form-inputs-section">
+                  <label for="email" class="block"
+                    ><span class="block font-Montserrat font-bold mt-5 text-lg"
+                      >Email Address</span
+                    >
+                    <div
+                      id="mail-icon-container"
+                      class="relative flex justify-end items-center"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-8 h-6 mt-5 absolute text-stone-400 focus:text-teal-400"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
+                        />
+                      </svg>
+
+                      <input
+                        type="email"
+                        id="email"
+                        class="block w-full h-10 border px-3 py-5 mt-5 text-sm font-Roboto font-light text-stone-700 shadow border-gray-300 focus:outline-teal-500 rounded"
+                        placeholder="sampletext@gmail.com"
+                      />
+                    </div>
+                  </label>
+
+                  <label for="password" class="block"
+                    ><span class="block font-Montserrat font-bold mt-5 text-lg"
+                      >Password
+                    </span>
+
+                    <div
+                      id="eye-icons-container"
+                      class="relative flex justify-end items-center"
+                    >
+                      <!-- EYE WITHOUT SLASH ICON FOR SHOWING PASSWORD-->
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-8 h-6 mt-5 absolute text-stone-400 focus:text-teal-400"
+                        id="eye-icon-show"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
+                        />
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                        />
+                      </svg>
+
+                      <!-- EYE WITH SLASH ICON FOR NOT SHOWING PASSWORDS -->
+
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-8 h-6 mt-5 absolute text-stone-400 focus:text-teal-400"
+                        id="eye-slash-icon-hidden"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M3.98 8.223A10.477 10.477 0 0 0 1.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.451 10.451 0 0 1 12 4.5c4.756 0 8.773 3.162 10.065 7.498a10.522 10.522 0 0 1-4.293 5.774M6.228 6.228 3 3m3.228 3.228 3.65 3.65m7.894 7.894L21 21m-3.228-3.228-3.65-3.65m0 0a3 3 0 1 0-4.243-4.243m4.242 4.242L9.88 9.88"
+                        />
+                      </svg>
+
+                      <input
+                        type="password"
+                        id="password"
+                        class="block w-full h-10 border px-3 py-5 mt-5 text-sm font-Roboto font-light text-stone-700 shadow border-gray-300 focus:outline-teal-500 rounded"
+                      />
+                      <input
+                        type="checkbox"
+                        id="showPassword"
+                        class="absolute w-8 mt-5 cursor-pointer opacity-0"
+                        onclick="togglePasswordVisibility()"
+                      />
+                    </div>
+                    <a
+                      href="#"
+                      class="flex mt-2 font-Roboto font-light justify-end items-center text-teal-500"
+                      >Forgot Password?</a
+                    >
+                  </label>
+                </div>
+
+                <!-- Action Buttons -->
+                <div
+                  id="form-action-buttons"
+                  class="flex flex-row justify-center items-center mt-5 w-full bg-teal-600 text-white px-2 py-4 tracking-wide cursor-pointer font-Montserrat text-xl font-bold hover:bg-teal-700 transition-all ease-in-out delay-100"
+                >
+                  <input type="submit" name="sign-in-button" value="Sign-In" />
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./sign-in-script.js"></script>
+  </body>
+</html>
