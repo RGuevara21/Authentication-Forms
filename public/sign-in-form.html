@@ -6,36 +6,37 @@
     <title>Sign-In</title>
     <link rel="stylesheet" href="./sign-in.css" />
   </head>
-  <body class="bg-gray-200">
+  <body class="bg-gradient-to-tr from-white to-teal-200">
     <!-- Page Wrapper-->
     <div
       id="page-wrapper"
       class="w-full flex items-center justify-center min-h-screen"
     >
       <!-- Container-Outside-->
-      <div id="outside-form-container" class="flex justify-center items-center">
+      <div
+        id="outside-form-container"
+        class="flex justify-center items-center px-4 py-5 my-2 md:px-10 lg:px-10"
+      >
         <!-- Container-Inside -->
         <div
           id="inside-form-container"
-          class="bg-white px-20 py-20 flex flex-row rounded-xl shadow-xl drop-shadow-xl"
+          class="bg-white px-8 py-12 flex flex-row rounded-xl shadow-xl drop-shadow-xl md:px-10 lg:px-16"
         >
           <!-- Form-Background -->
-          <div id="sign-in-form-background">
+          <div
+            id="sign-in-form-background"
+            class="hidden sm:hidden md:hidden lg:flex lg:flex-col lg:justify-center lg:items-center"
+          >
             <img
               src="./img_used/sign-in-background.jpg"
-              class="w-full object-contain object-center sm:w-20 md:w-60 lg:w-48 xl:w-56 2xl:w-10/12"
+              class="w-full object-contain object-center lg:w-72 xl:w-72 2xl:w-10/12"
             />
-            <span
-              class="mt-5 flex font-Roboto font-light justify-center items-center"
-            >
-              Don't have an account?
-              <a href="./sign-up-form.html" class="text-teal-500 ml-2">
-                Sign-Up</a
-              >
-            </span>
           </div>
           <!-- Form-Contents -->
-          <div id="sign-in-form-contents" class="block items-center">
+          <div
+            id="sign-in-form-contents"
+            class="block items-center lg:ml-10 xl:ml-10 2xl:ml-0"
+          >
             <!-- Header Section-->
             <div
               id="header-section"
@@ -43,13 +44,13 @@
             >
               <h1
                 id="header-title"
-                class="font-Montserrat text-4xl font-bold text-center block"
+                class="font-Montserrat text-3xl font-bold text-center block lg:text-4xl"
               >
                 Authenticate
               </h1>
               <p
                 id="header-caption"
-                class="font-Roboto text-lg font-normal text-center block mt-8"
+                class="font-Roboto text-base font-normal text-center block mt-8 lg:px-4"
               >
                 Sign in to access your GoCloud account.
               </p>
@@ -57,9 +58,12 @@
             <!-- Form Inputs Section -->
             <form>
               <fieldset>
-                <div id="form-inputs-section">
+                <div
+                  id="form-inputs-section"
+                  class="lg:mt-4 lg:max-h-80 lg:overflow-y-auto lg:px-2 lg:scroll-smooth lg:scrollbar-thumb-teal-400 lg:scrollbar-thin"
+                >
                   <label for="email" class="block"
-                    ><span class="block font-Montserrat font-bold mt-5 text-lg"
+                    ><span class="block font-Montserrat font-bold mt-5 text-sm"
                       >Email Address</span
                     >
                     <div
@@ -91,7 +95,7 @@
                   </label>
 
                   <label for="password" class="block"
-                    ><span class="block font-Montserrat font-bold mt-5 text-lg"
+                    ><span class="block font-Montserrat font-bold mt-5 text-sm"
                       >Password
                     </span>
 
@@ -165,6 +169,20 @@
                   class="flex flex-row justify-center items-center mt-5 w-full bg-teal-600 text-white px-2 py-4 tracking-wide cursor-pointer font-Montserrat text-xl font-bold hover:bg-teal-700 transition-all ease-in-out delay-100"
                 >
                   <input type="submit" name="sign-in-button" value="Sign-In" />
+                </div>
+
+                <div id="form-redirect-to-sign-up">
+                  <span
+                    class="mt-5 block font-Roboto font-light justify-center items-center text-center text-base"
+                  >
+                    Don't have an account?
+                    <a
+                      href="./sign-up-form.html"
+                      class="text-teal-500 ml-1 text-center text-base"
+                    >
+                      Sign-Up</a
+                    >
+                  </span>
                 </div>
               </fieldset>
             </form>
